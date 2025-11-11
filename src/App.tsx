@@ -1,10 +1,5 @@
-import React, { useRef, useState, ChangeEvent } from "react";
-import {
-  ConnectButton,
-  useCurrentAccount,
-  useSuiClient,
-  useSignAndExecuteTransaction,
-} from "@mysten/dapp-kit";
+import { useRef, useState, ChangeEvent } from "react";
+import { ConnectButton, useCurrentAccount } from "@mysten/dapp-kit";
 import {
   Box,
   Container,
@@ -25,9 +20,6 @@ interface FileItem {
 function App() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const account = useCurrentAccount();
-  const suiClient = useSuiClient();
-  const { mutate: signAndExecuteTransactionBlock } =
-    useSignAndExecuteTransaction();
 
   const [files, setFiles] = useState<FileItem[]>([
     { name: "Document1.pdf", type: "pdf", createdAt: Date.now() - 100000 },
@@ -104,10 +96,6 @@ function App() {
     if (!trashedFiles.includes(file)) {
       setTrashedFiles((prev) => [...prev, file]);
     }
-  };
-
-  const restoreFromTrash = (file: FileItem) => {
-    setTrashedFiles((prev) => prev.filter((f) => f !== file));
   };
 
   const getVisibleFiles = () => {
