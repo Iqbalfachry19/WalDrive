@@ -1,47 +1,33 @@
-# SuiAge
+# WalDrive
+
 ## Project Description
-SuiAge is a zero-knowledge (ZK) age verification protocol built on the Sui blockchain.
 
-It allows users to prove that they are above a certain age threshold (e.g., 18+) without revealing their actual birthdate or any personal information.
+**WalDrive** is a decentralized file storage and sharing platform built on the Sui blockchain.
 
-By extracting the user's birth year from an identity document (such as Indonesia’s KTP), a zk-SNARK proof is generated off-chain and verified on-chain. This enables trustless and privacy-preserving access control for age-restricted content in dApps, games, and DeFi applications.
+It allows users to securely upload, store, and share files while maintaining privacy and ownership. Users retain full control over their data, and sensitive files can be protected using encryption and optional privacy-preserving technologies.
 
-## SuiAgeNFT Integration
+WalDrive leverages blockchain verification to ensure file integrity and provides trustless access management for shared content.
 
-Once a user is verified, they can mint an NFT as proof of their verified age status using the companion NFT project:
+## WalDriveNFT Integration
 
-👉 [SuiAgeNFT GitHub Repository](https://github.com/Iqbalfachry19/SuiAgeNFT)
+Once a user uploads or interacts with files, they can mint an NFT as a proof of ownership or access using the companion NFT project:
 
-This NFT acts as a credential on-chain, signaling that the user has passed the age verification check.
+👉 [WalDriveNFT GitHub Repository](https://github.com/Iqbalfachry19/WalDriveNFT)
+
+This NFT acts as an on-chain credential, signaling verified ownership or permission for a file or folder.
+
 ## Tech Stack
-- [React](https://react.dev/) as the UI framework
-- [TypeScript](https://www.typescriptlang.org/) for type checking
-- [Vite](https://vitejs.dev/) for build tooling
-- [Radix UI](https://www.radix-ui.com/) for pre-built UI components
-- [ESLint](https://eslint.org/)
-- [`@mysten/dapp-kit`](https://sdk.mystenlabs.com/dapp-kit) for connecting to
-  wallets and loading data
-- [pnpm](https://pnpm.io/) for package management
 
-## Starting dapp
+- **React** – UI framework  
+- **TypeScript** – Type checking  
+- **Vite** – Build tooling  
+- **Radix UI** – Pre-built UI components  
+- **ESLint** – Code quality  
+- **@mysten/dapp-kit** – Wallet integration and blockchain interaction  
+- **pnpm** – Package management  
 
-To install dependencies you can run
+## Getting Started
 
+### Install dependencies
 ```bash
 pnpm install
-```
-
-To start your dApp in development mode run
-
-```bash
-pnpm dev
-```
-
-## Building
-
-To build your app for deployment you can run
-
-```bash
-pnpm build
-```
-
