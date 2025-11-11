@@ -222,7 +222,7 @@ function App() {
           {/* Tombol New */}
           <div style={{ position: "relative", marginBottom: "1rem" }}>
             <Button
-              variant="blue"
+              variant="solid"
               size="2"
               style={{
                 width: "100%",
@@ -281,7 +281,7 @@ function App() {
           {(["my drive", "recent", "starred", "trash"] as const).map((tab) => (
             <Button
               key={tab}
-              variant={activeTab === tab ? "blue" : "ghost"}
+              variant={activeTab === tab ? "solid" : "ghost"}
               size="2"
               style={{ width: "100%", marginBottom: "0.5rem" }}
               onClick={() => setActiveTab(tab)}
@@ -475,7 +475,7 @@ function App() {
               }}
             >
               <Button
-                variant="blue"
+                variant="solid"
                 size="2"
                 onClick={() => setIsModalOpen(false)}
               >
